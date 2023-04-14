@@ -15,6 +15,8 @@ Response.default_content_type = "text/html"
 bme_module = BME280Module(I2C_ID,SCL_PIN,SDA_PIN)
 lab1 = POWERlab(6)
 lab2 = POWERlab(7)
+lab1.offPower()
+lab2.offPower()
 # index.html root route
 @app.route("/")
 async def index(request):
